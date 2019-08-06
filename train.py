@@ -13,8 +13,8 @@ for size in imgSizes:
 	assert(X[size].max() == 1. and X[size].min() == -1.)
 
 # Parameters
-epochsG = 1500
-epochsAE = 1500
+epochsG = 2500
+epochsAE = 2000
 batchSize = 64
 lr = 1e-4
 lam = 10.0
