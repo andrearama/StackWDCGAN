@@ -2,7 +2,7 @@ import tensorflow as tf
 import src.util as util, src.network as network, src.UNET_GAN as UNET_GAN, src.loss as loss
 
 tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
-basePath = "/home/francesco/UQ/Job/ArtGAN/"
+basePath = "/scratch/cai/StackWDCGAN/"
 
 # Get data in different sizes
 imgSizes = [64, 256]
@@ -41,7 +41,7 @@ X64 = iterator64.get_next()
 # Dataset 256x256
 dataset256 = tf.data.Dataset.from_generator(generatorAE, (tf.float32),
 					output_shapes=(tf.TensorShape([256, 256, 3]))).repeat(epochsAE).shuffle(buffer_size=len(X[256])).batch(batchSize, drop_remainder=True)
-iterator256 = dataset64.make_initializable_iterator()
+iterator256 = dataset256.make_initializable_iterator()
 X256 = iterator256.get_next()
 
 Z = tf.placeholder(tf.float32, [None, Z_dim])
