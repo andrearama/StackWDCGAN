@@ -8,3 +8,9 @@ Implementation of an improved (gradient penalty on discriminator/critic loss) Wa
 ![DCGAN](https://gluon.mxnet.io/_images/dcgan.png)
 
 ![Explanation](https://cdn-images-1.medium.com/max/1600/1*JnBQNCOJxa8w9YMc5YjoXQ.png)
+
+
+
+### 256x256 U-Net GAN
+
+![Architecture](https://pbs.twimg.com/media/DDdki4uXsAEVGTU.jpg)
